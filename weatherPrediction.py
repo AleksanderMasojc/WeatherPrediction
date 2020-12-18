@@ -29,8 +29,8 @@ if weather[len(weather)-1]>=wMean:
 else:
    initial_distribution = tfd.Categorical(probs = [.8, .2])
 
-transition_distribution = tfd.Categorical(probs = [[.7, .3], # zmiana po dniu zimnym
-                                                   [.2,.8]]) # po dniu ciepłym
+transition_distribution = tfd.Categorical(probs = [[.7, .3],
+                                                   [.2,.8]])
                                         
 observation_distribution = tfd.Normal(loc = [cMean, wMean], scale = [cStanDev, wStanDev])
 
